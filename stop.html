@@ -43,7 +43,7 @@ let milliseconds = 0;
 let timer;
 let isRunning = false;
 
-// Start the stopwatch
+// Start
 function startStopwatch() {
   if (!isRunning) {
     isRunning = true;
@@ -51,13 +51,13 @@ function startStopwatch() {
   }
 }
 
-// Pause the stopwatch
+// Pause
 function pauseStopwatch() {
   clearInterval(timer);
   isRunning = false;
 }
 
-// Reset the stopwatch
+// Reset 
 function resetStopwatch() {
   clearInterval(timer);
   isRunning = false;
@@ -70,7 +70,7 @@ function resetStopwatch() {
   document.getElementById('laps').innerHTML = ''; // Clear lap times
 }
 
-// Record a lap time
+// Record
 function lapStopwatch() {
   if (isRunning) {
     const lapTime = `${formatTime(minutes)}:${formatTime(seconds)}:${formatTime(milliseconds)}`;
@@ -80,7 +80,7 @@ function lapStopwatch() {
   }
 }
 
-// Update stopwatch display
+// Update 
 function updateStopwatch() {
   milliseconds++;
   if (milliseconds === 100) {
